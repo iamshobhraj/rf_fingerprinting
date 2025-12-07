@@ -49,8 +49,10 @@ We primarily utilized the **Training** and **Test** splits provided:
 | `Train/dataset_training_no_aug.h5` | 1 - 30 | 500 | None (Used for Initial efficient-net) |
 | `Test/dataset_seen_devices.h5` | 1 - 30 | 400 | Residential, LOS, Stationary |
 
-### Citation
-If you use this dataset, please cite the original authors:
+### Acknowledgments & Reference
+This project utilizes the dataset provided by Shen et al. We acknowledge their valid contribution to the field.
+
+**Original Paper**:
 ```bibtex
 @article{shen2021towards,
   title={Towards Scalable and Channel-Robust Radio Frequency Fingerprint Identification for LoRa},
