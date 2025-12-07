@@ -31,15 +31,15 @@ The `Efficient-ResNet` uses a deep stack of residual blocks with skip connection
 
 ```mermaid
 graph TD;
-    Input[Raw IQ Data (8192, 2)] --> Conv1[Conv1D + BatchNormal];
-    Conv1 --> Block1[Residual Block x2 (32 filters)];
-    Block1 --> Block2[Residual Block x2 (64 filters)];
-    Block2 --> Block3[Residual Block x2 (128 filters)];
-    Block3 --> Block4[Residual Block x2 (256 filters)];
-    Block4 --> GAP[Global Average Pooling];
-    GAP --> Drop[Dropout 0.3];
-    Drop --> Dense[Dense 256 + ReLU];
-    Dense --> Output[Softmax (30 Classes)];
+    Input["Raw IQ Data (8192, 2)"] --> Conv1["Conv1D + BatchNormal"];
+    Conv1 --> Block1["Residual Block x2 (32 filters)"];
+    Block1 --> Block2["Residual Block x2 (64 filters)"];
+    Block2 --> Block3["Residual Block x2 (128 filters)"];
+    Block3 --> Block4["Residual Block x2 (256 filters)"];
+    Block4 --> GAP["Global Average Pooling"];
+    GAP --> Drop["Dropout 0.3"];
+    Drop --> Dense["Dense 256 + ReLU"];
+    Dense --> Output["Softmax (30 Classes)"];
 ```
 
 ---
