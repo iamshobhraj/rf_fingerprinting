@@ -25,6 +25,15 @@ We engineered a custom **1D Residual Network (ResNet)** optimized for raw IQ sig
 
 ---
 
+## Dataset
+
+This project utilizes the **LoRa_RFFI_dataset** from the University of Liverpool.
+- **Source**: [IEEE DataPort](https://ieee-dataport.org/open-access/lorarffidataset)
+- **Features**: Raw IQ signals captured from commercially available LoRa devices.
+- **Conditions**: Includes Clean (Laboratory) and Augmented (Noisy/Fading) scenarios.
+
+---
+
 ## Model Architecture
 
 The `Efficient-ResNet` uses a deep stack of residual blocks with skip connections to learn identity mappings, prevention gradient vanishing while capturing high-frequency micro-features.
