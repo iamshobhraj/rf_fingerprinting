@@ -1,0 +1,28 @@
+# Datasets (Too large for git)
+*.h5
+Train/
+Test/
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+major_project/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# Models (Large binaries - Use Git LFS or external storage)
+*.keras
+models/
+checklist.chk
+
+# System
+.DS_Store
+
+# Agent
+.gemini/

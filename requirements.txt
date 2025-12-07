@@ -1,0 +1,7 @@
+tensorflow>=2.10.0
+numpy
+h5py
+matplotlib
+seaborn
+scikit-learn
+scipy
