@@ -25,12 +25,43 @@ We engineered a custom **1D Residual Network (ResNet)** optimized for raw IQ sig
 
 ---
 
-## Dataset
+## Dataset Details
 
 This project utilizes the **LoRa_RFFI_dataset** from the University of Liverpool.
-- **Source**: [IEEE DataPort](https://ieee-dataport.org/open-access/lorarffidataset)
-- **Features**: Raw IQ signals captured from commercially available LoRa devices.
-- **Conditions**: Includes Clean (Laboratory) and Augmented (Noisy/Fading) scenarios.
+**Source**: [IEEE DataPort](https://ieee-dataport.org/open-access/lorarffidataset)
+
+### Experimental Devices
+The dataset contains signals from 60 commercial-off-the-shelf LoRa devices:
+
+| Device index | Model                 | Chipset |
+| ------------ | --------------------- | ------- |
+| 1 - 45       | Pycom LoPy4           | SX1276  |
+| 46 - 50      | mbed SX1261 shield    | SX1261  |
+| 51 - 55      | Pycom FiPy            | SX1272  |
+| 56 - 60      | Dragino SX1276 shield | SX1276  |
+
+### Dataset Structure
+We primarily utilized the **Training** and **Test** splits provided:
+
+| Dataset Path | Devices | Packets/Dev | Augmentation |
+| :--- | :--- | :--- | :--- |
+| `Train/dataset_training_aug.h5` | 1 - 30 | 1,000 | **Multipath & Doppler** (Used for Robust Model) |
+| `Train/dataset_training_no_aug.h5` | 1 - 30 | 500 | None (Used for Initial efficient-net) |
+| `Test/dataset_seen_devices.h5` | 1 - 30 | 400 | Residential, LOS, Stationary |
+
+### Citation
+If you use this dataset, please cite the original authors:
+```bibtex
+@article{shen2021towards,
+  title={Towards Scalable and Channel-Robust Radio Frequency Fingerprint Identification for LoRa},
+  author={Shen, Guanxiong and Zhang, Junqing and Marshall, Alan and Cavallaro, Joseph},
+  journal={IEEE Trans. Inf. Forensics Security},
+  year={2021}
+}
+```
+
+### License
+The dataset is licensed under a **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**.
 
 ---
 
