@@ -1,4 +1,4 @@
-# 📡 Deep-RF: Autonomous Radio Fingerprinting
+# Deep-RF: Autonomous Radio Fingerprinting
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 ![Accuracy](https://img.shields.io/badge/Accuracy-98.0%25-brightgreen)
@@ -10,7 +10,7 @@
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 **Deep-RF** is a robust security framework designed to authenticate IoT devices at the Physical Layer (PHY). Unlike cryptographic keys which can be stolen, **RF Fingerprints** are intrinsic to the hardware manufacturing process—making them impossible to clone.
 
@@ -25,7 +25,7 @@ We engineered a custom **1D Residual Network (ResNet)** optimized for raw IQ sig
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The `Efficient-ResNet` uses a deep stack of residual blocks with skip connections to learn identity mappings, prevention gradient vanishing while capturing high-frequency micro-features.
 
@@ -44,7 +44,7 @@ graph TD;
 
 ---
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 | Dataset Condition | Overall Accuracy | "Twin" Precision (Dev 21) | Robustness |
 | :--- | :---: | :---: | :---: |
@@ -55,7 +55,7 @@ graph TD;
 
 ---
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 
 ### 1. Prerequisites
 ```bash
@@ -88,7 +88,7 @@ python demo.py
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 major_pro/
@@ -109,7 +109,7 @@ major_pro/
 
 ---
 
-## 🔮 Future Roadmap
+## Future Roadmap
 
 - [ ] **Vector Database Integration**: Scale to 1M+ devices using embedding search.
 - [ ] **Real-Time SDR Support**: Integation with RTL-SDR for live air capture.
